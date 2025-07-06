@@ -19,13 +19,12 @@ body {
 
 /* Header */
 header {
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(5px);
+    background: white;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 nav {
@@ -57,13 +56,12 @@ nav .container {
 
 .nav-menu a {
     text-decoration: none;
-    color: white;
+    color: #666;
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
     padding-bottom: 4px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .nav-menu a::after {
@@ -73,12 +71,12 @@ nav .container {
     left: 0;
     width: 0;
     height: 2px;
-    background: #5856d6;
+    background: #ff6b35;
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: #1a1a1a;
 }
 
 .nav-menu a:hover::after {
@@ -91,13 +89,25 @@ nav .container {
     flex-wrap: wrap;
     align-items: stretch;
     min-height: 100vh;
-    background: linear-gradient(180deg, rgba(63, 81, 181, 0.8) 0%, rgba(156, 39, 176, 0.8) 50%, rgba(247, 249, 252, 0) 100%), url('assets/images/hero3.png');
+    background: linear-gradient(180deg, rgba(88, 86, 214, 0.6) 0%, rgba(88, 86, 214, 0.4) 50%, rgba(247, 249, 252, 0) 100%), url('assets/images/hero3.png');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
     margin-top: 0;
     position: relative;
     overflow: hidden;
+    filter: brightness(0.95);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
 }
 
 /* Hero Left Side */
@@ -126,39 +136,35 @@ nav .container {
 
 .hero-title {
     font-weight: 700;
-    background: linear-gradient(90deg, #3f8efc, #9c27b0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #2c3e50;
     display: inline-block;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
     font-weight: 400;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    color: #555;
 }
 
 .hero-btn {
     display: inline-block;
-    padding: 16px 36px;
+    padding: 14px 30px;
     border: none;
     color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    background: #ff6b35;
+    box-shadow: none;
 }
 
 .hero-btn:hover {
-    background: linear-gradient(135deg, #f7931e, #ff6b35);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    background: #ff5722;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
 }
 
 /* Hero Right Side */
@@ -354,7 +360,7 @@ h2 {
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #3f51b5, #9c27b0);
+    background: #ff6b35;
     color: white;
     border: none;
     padding: 16px 32px;
@@ -368,9 +374,9 @@ h2 {
 }
 
 .submit-btn:hover {
-    background: linear-gradient(135deg, #303f9f, #7b1fa2);
+    background: #ff5722;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(63, 81, 181, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
 }
 
 .g-recaptcha {

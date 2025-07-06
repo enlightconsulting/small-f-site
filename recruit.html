@@ -182,25 +182,7 @@
                 }
             });
             
-            // ヘッダー背景の変更
-            const header = document.querySelector('header');
-            if (scrolled > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-                header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.08)';
-                document.querySelectorAll('.nav-menu a').forEach(link => {
-                    link.style.color = '#666';
-                    link.style.textShadow = 'none';
-                });
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0)';
-                header.style.backdropFilter = 'blur(5px)';
-                header.style.boxShadow = 'none';
-                document.querySelectorAll('.nav-menu a').forEach(link => {
-                    link.style.color = 'white';
-                    link.style.textShadow = '0 1px 2px rgba(0,0,0,0.3)';
-                });
-            }
+            // ヘッダーは常に白色で固定
         });
         
         // 初期状態で要素を非表示に
