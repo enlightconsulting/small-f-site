@@ -8,7 +8,7 @@ body {
     font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.8;
     color: #1a1a1a;
-    background: #fafafa;
+    background: #f5f6f7;
 }
 
 .container {
@@ -19,12 +19,13 @@ body {
 
 /* Header */
 header {
-    background: #fff;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 nav {
@@ -56,12 +57,13 @@ nav .container {
 
 .nav-menu a {
     text-decoration: none;
-    color: #666;
+    color: white;
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
     padding-bottom: 4px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .nav-menu a::after {
@@ -76,7 +78,7 @@ nav .container {
 }
 
 .nav-menu a:hover {
-    color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-menu a:hover::after {
@@ -210,7 +212,7 @@ h2 {
 
 /* Service Section */
 .service {
-    background: #fff;
+    background: #fafafa;
 }
 
 .service-grid {
@@ -224,16 +226,17 @@ h2 {
 .service-item {
     padding: 3rem;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
-    background: #fafafa;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .service-item:hover {
-    border-color: #ddd;
+    border-color: rgba(0,0,0,0.08);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .service-icon {
@@ -264,7 +267,7 @@ h2 {
 
 /* About Section */
 .about {
-    background: #fafafa;
+    background: white;
 }
 
 .about table {
@@ -278,7 +281,7 @@ h2 {
 .about td {
     padding: 1.2rem 1.5rem;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .about th {
@@ -295,7 +298,7 @@ h2 {
 
 /* Contact Section */
 .contact {
-    background: #fff;
+    background: #fafafa;
 }
 
 .contact-form {
@@ -323,12 +326,12 @@ h2 {
 .form-group textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(0,0,0,0.08);
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
-    background: #fafafa;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .form-group input:focus,
