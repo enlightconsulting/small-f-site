@@ -89,7 +89,7 @@ nav .container {
     flex-wrap: wrap;
     align-items: stretch;
     min-height: 100vh;
-    background: linear-gradient(rgba(26, 26, 26, 0.4), rgba(26, 26, 26, 0.5)), url('assets/images/hero2.png');
+    background: linear-gradient(rgba(26, 26, 26, 0.4), rgba(26, 26, 26, 0.5)), url('assets/images/hero3.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
