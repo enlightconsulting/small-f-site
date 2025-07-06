@@ -215,14 +215,14 @@ nav .container {
     font-weight: 500;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    background: #5856d6;
+    background: #ff6b35;
     box-shadow: none;
 }
 
 .hero-btn:hover {
-    background: #4c4acf;
+    background: #ff5722;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(88, 86, 214, 0.25);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
 }
 
 /* Hero Right Side */
@@ -430,7 +430,7 @@ h2::after {
 }
 
 .submit-btn {
-    background: #5856d6;
+    background: #ff6b35;
     color: white;
     border: none;
     padding: 16px 32px;
@@ -444,9 +444,9 @@ h2::after {
 }
 
 .submit-btn:hover {
-    background: #4c4acf;
+    background: #ff5722;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(88, 86, 214, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
 }
 
 .g-recaptcha {
