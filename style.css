@@ -89,12 +89,13 @@ nav .container {
     flex-wrap: wrap;
     align-items: stretch;
     min-height: 100vh;
-    background: linear-gradient(rgba(26, 26, 26, 0.4), rgba(26, 26, 26, 0.5)), url('assets/images/hero3.png');
+    background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.7)), url('assets/images/hero3.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin-top: 0;
     position: relative;
+    overflow: hidden;
 }
 
 /* Hero Left Side */
@@ -104,6 +105,8 @@ nav .container {
     display: flex;
     align-items: center;
     padding: 80px 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text-content {
@@ -173,6 +176,22 @@ nav .container {
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+/* Particle Animation */
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particles {
+    width: 100%;
+    height: 100%;
 }
 
 /* Sections */
