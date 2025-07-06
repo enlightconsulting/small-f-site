@@ -199,6 +199,14 @@
                 }
             });
             
+            // 会社概要セクションのパララックス
+            const aboutSection = document.querySelector('.about');
+            if (aboutSection) {
+                const rect = aboutSection.getBoundingClientRect();
+                const speed = 0.5;
+                aboutSection.style.backgroundPositionY = (rect.top * speed) + 'px';
+            }
+            
             // ヘッダー背景の変更
             const header = document.querySelector('header');
             if (scrolled > 100) {
