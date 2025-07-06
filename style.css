@@ -163,10 +163,40 @@ nav .container {
 }
 
 .hero-title {
-    font-weight: 700;
+    font-weight: 800;
     color: #2c3e50;
     display: inline-block;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2.5s ease-in-out 0.5s both;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #2c3e50;
+    animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .hero-subtitle {
@@ -239,9 +269,24 @@ h2 {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 3.5rem;
-    color: #1a1a1a;
+    color: #5856d6;
     font-weight: 700;
     letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #5856d6, #4c4acf);
+    border-radius: 2px;
 }
 
 /* Service Section */
@@ -441,11 +486,12 @@ footer p {
 
 .page-title {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 800;
     color: white;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
     line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
 }
 
 .page-subtitle {
