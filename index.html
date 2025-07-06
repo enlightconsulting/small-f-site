@@ -17,6 +17,11 @@
                 <h1 class="logo">
                     <img src="assets/images/logo-transparent - resize.png" alt="株式会社スモールエフ" class="logo-img">
                 </h1>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul class="nav-menu">
                     <li><a href="#about">会社概要</a></li>
                     <li><a href="#service">サービス</a></li>
@@ -208,6 +213,23 @@
             }
             
             // ヘッダーは常に白色で固定
+        });
+        
+        // ハンバーガーメニュー
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // メニューリンクをクリックしたらメニューを閉じる
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
         });
         
         // 初期状態でサービスアイテムを非表示に
