@@ -56,10 +56,27 @@ nav .container {
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1eb5d1;
+    transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
     color: #1a1a1a;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -96,18 +113,18 @@ nav .container {
 }
 
 /* Background Animation */
-.hero .wave {
+.background-svg {
     position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.1;
+    top: 0;
+    left: 0;
 }
 
-.hero .wave path {
-    fill: #3f8efc;
+.background-svg svg {
+    width: 100%;
+    height: 100%;
 }
 
 /* Sections */
@@ -159,7 +176,7 @@ h2 {
 .service-icon svg {
     width: 48px;
     height: 48px;
-    stroke: #3f8efc;
+    stroke: #1eb5d1;
     stroke-width: 1.5;
 }
 
@@ -249,7 +266,7 @@ h2 {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #3f8efc;
+    border-color: #1eb5d1;
     background: #fff;
 }
 
