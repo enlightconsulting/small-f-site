@@ -347,14 +347,19 @@ h2 {
 
 /* Footer */
 footer {
-    background: #1a1a1a;
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.95)), url('assets/images/footer.png');
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 2.5rem 0;
+    padding: 4rem 0;
+    position: relative;
 }
 
 footer p {
-    color: #999;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.875rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Page Hero */
