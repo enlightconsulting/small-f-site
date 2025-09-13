@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' https://www.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; connect-src 'self' https://formspree.io;">
     <title>採用情報 | 株式会社スモールエフ</title>
-    <link rel="icon" type="image/png" href="assets/images/logo-transparent - resize.png">
+    <link rel="icon" type="image/png" href="assets/images/logo-transparent-resize.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
             <div class="container">
                 <h1 class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo-transparent - resize.png" alt="株式会社スモールエフ" class="logo-img">
+                        <img src="assets/images/logo-transparent-resize.png" alt="株式会社スモールエフ" class="logo-img">
                     </a>
                 </h1>
                 <div class="hamburger">
@@ -163,57 +164,6 @@
     </footer>
     
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-    <script>
-        // パララックスエフェクト for 採用ページ
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            
-            // ページヒーロー背景のパララックス
-            const pageHero = document.querySelector('.page-hero');
-            if (pageHero) {
-                pageHero.style.backgroundPositionY = scrolled * 0.5 + 'px';
-            }
-            
-            // 働き方アイテムのフェードイン
-            const workItems = document.querySelectorAll('.work-style-item');
-            workItems.forEach((item, index) => {
-                const rect = item.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-                
-                if (rect.top < windowHeight * 0.8) {
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                    item.style.transitionDelay = `${index * 0.15}s`;
-                }
-            });
-            
-            // ヘッダーは常に白色で固定
-        });
-        
-        // ハンバーガーメニュー
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        
-        // メニューリンクをクリックしたらメニューを閉じる
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-        
-        // 初期状態で要素を非表示に
-        document.querySelectorAll('.work-style-item').forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = 'all 0.6s ease';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
